@@ -15,7 +15,7 @@ steps:
     - deploy
     - forrest-blog-site 
     - --image
-    - gcr.io/$PROJECT_ID/forrest_blog:latest
+    - gcr.io/$PROJECT_ID/forrest_blog:$COMMIT_SHA
     - --region
     - us-west1 
     - --platform
