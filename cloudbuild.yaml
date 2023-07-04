@@ -12,7 +12,7 @@ steps:
   args:
     - run
     - deploy
-    - forrest_blog_site 
+    - forrest-blog-site 
     - --image
     - gcr.io/$PROJECT_ID/forrest_blog:latest
     - --region
