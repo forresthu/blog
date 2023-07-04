@@ -1,6 +1,7 @@
 steps:
 # use Buildpacks to create a container image
 - name: 'gcr.io/k8s-skaffold/pack'
+  id: 'pack'
   entrypoint: 'pack'
   args: 
     - build 
@@ -20,3 +21,6 @@ steps:
     - --platform
     - managed
     - --allow-unauthenticated
+  waitFor: 
+    - pack
+
