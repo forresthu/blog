@@ -2,7 +2,14 @@ steps:
 # use Buildpacks to create a container image
 - name: 'gcr.io/k8s-skaffold/pack'
   entrypoint: 'pack'
-  args: ['build', '--builder=gcr.io/buildpacks/builder', '--publish', 'gcr.io/$PROJECT_ID/hello-app-bp:$COMMIT_SHA']
+  args: >
+    ['build', '--builder=gcr.io/buildpacks/builder', 
+     '--publish', 'gcr.io/$PROJECT_ID/forrest_blog:$COMMIT_SHA']
 #deploy to Google Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'seroter-hello-app-bp', '--image', 'gcr.io/$PROJECT_ID/hello-app-bp:latest', '--region', 'us-west1', '--platform', 'managed']
+  args: > 
+    ['run', 'deploy', 'forrest_blog_site', 
+     '--image', 'gcr.io/$PROJECT_ID/forrest_blog:latest', 
+     '--region', 'us-west1', 
+     '--platform', 'managed',
+     '--allow-unauthenticated']
