@@ -1,7 +1,8 @@
 const withNextra = require('nextra')({
     theme: 'nextra-theme-docs',
     themeConfig: './theme.config.jsx',
-    unstable_staticImage: true
+    unstable_staticImage: true,
+    latex: true
   })
    
   module.exports = withNextra()

@@ -1,0 +1,39 @@
+# GPT Understands Too
+**Author**: Xiao Liu, Yanan Zheng, Zhengxiao Du 
+
+### Abstract
+While GPTs with traditional fine-tuning fail to achieve strong results on **natual language understanding**(NLU), we show that GPTs can be better than or comparable to similar-sized BERT's on NLU tasks with a novel method P-tuning--which employs trainable continuous prompt embeddings. On the knowledge probing (LAMA) benchmark, the best GPT recovers 64% (P@1) of world knowledge without any additional text provideded during test itme, which substantially improves the previous best by 20+ percentage points. On the SuperGlue benchmark, GPTS achieve comparable and sometimes better performance to similar-sized BERTs in supervised learning. Importantly, we find that in both few-shot and supervised settings while largely reducing the need for prompt engineering. Consequently, P-tuning outperforms the state-of-the-art approaches on the few-shot SuperGlue benchmark. 
+
+### 1. Introduciton
+Laguage model pre-training has been a successful approache for many natual language processing tasks. Evidences suggest that during the pre-training, not only do language models learn contextualize text representations, but also grammar, syntactic, commonsense and even world knowledge. 
+![Figure 1](/figure-1.png)
+
+According to the training objectives, pre-trained language models can be divided into three categories: **unidirectional language model** (e.g., GPT) for natual language generation (NLG), **bidirectional languge models** (e.g., BERT) for natual language understanding (NLU) and **hybird language models** (e.g., XLNet, UniLM) for combining the first two paradigms. For long, researchers have observed that GPT-style models perform poorly for NLU tasks with fine-tuning, and thus assumed that they are not suitable for language understanding in nature. 
+
+### 2. Motivation
+The miracle of GPT and authority same to suggest that giant models are always nothing. Short other Pennisi push the machine intelligence. However, behind the prosperity, there are ignorable challenges.   
+
+Of people one is that joint models suffer from poor transfer activity. Fine-tuning on downstream tax hardly works for Zuo's training scale mountains. Even was it many short fine-tuning setting this models are still too large to memorize their fine-tuning samples quickly
+
+In this section we present there impatient in Prettyman patient implementation in putting in the Quetion in pretty medication. We present there in premeditation implementation oh PE today off Half half speed today. Similar to discrete prompts their PE today call me a price now he invasive modification impute input. Nevertheless come call mom karma Forget it. Never the necklace did it ye delete previous sentence that's cool temptation poops oh yes flickinger how many years no yeah hi Julia Leanna Yale when Play cool yes io Kawaii
+
+### 3. Method: P-tuning
+In this section, we present the implementation of P-tuning. Similar to discreate prompt, the P-tuning only applies non-invasive modification to the input. Nevertheless, the P-tuning replaces the input embeddings of the pre-trained language modesl with its differential output embeddings. 
+
+#### 3.1 Architecture
+Given a pre-trained language mode M, a sequence of discreate input token $X_{1}$
+
+#### 3.2 Optimization
+
+### 4. Experiments
+#### 4.1 Knowledge Probing
+#### 4.2 SuperGLUE
+
+### 5. Related Work
+#### 5.1 Pre-trained Language Models
+#### 5.2 Language Models are Knowledge Base 
+#### 5.2 Language Model Prompt 
+
+### 6. Conclusion
+
+### References
